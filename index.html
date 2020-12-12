@@ -1,27 +1,58 @@
-<html>
-<head>
-    <title>Getting Started with jQuery Grid</title>
-    <meta charset="utf-8" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-</head>
-<body>
-    <table id="grid"></table>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var grid = $('#grid').grid({
-                dataSource: '/Players/Get',
-                columns: [
-                    { field: 'ID', width: 56 },
-                    { field: 'Name', sortable: true },
-                    { field: 'PlaceOfBirth', title: 'Place Of Birth', sortable: true },
-                    { field: 'DateOfBirth', title: 'Date Of Birth', type: 'date', width: 150 }
-                ],
-                pager: { limit: 5 }
-            });
-        });
-    </script>
-</body>
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <link href="file:css/index.css" rel="stylesheet" type="text/css">
+
+    <script src="js/index.js"></script>
+
+
+    <h2>Favorite books</h2>
+<ul class="accordion-menu">
+  <li>
+    <div class="dropdownlink"><i class="fa fa-road" aria-hidden="true"></i> History
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div>
+    <ul class="submenuItems">
+      <li><a href="#">History book 1</a></li>
+      <li><a href="#">History book 2</a></li>
+      <li><a href="#">History book 3</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="dropdownlink"><i class="fa fa-paper-plane" aria-hidden="true"></i> Fiction
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div>
+    <ul class="submenuItems">
+      <li><a href="#">Fiction book 1</a></li>
+      <li><a href="#">Fiction book 2</a></li>
+      <li><a href="#">Fiction book 3</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="dropdownlink"><i class="fa fa-quote-left" aria-hidden="true"></i> Fantasy
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div>
+    <ul class="submenuItems">
+      <li><a href="#">Fantasy book 1</a></li>
+      <li><a href="#">Fantasy book 2</a></li>
+      <li><a href="#">Fantasy book 3</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="dropdownlink"><i class="fa fa-motorcycle" aria-hidden="true"></i> Action
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div>
+    <ul class="submenuItems">
+      <li><a href="#">Action book 1</a></li>
+      <li><a href="#">Action book 2</a></li>
+      <li><a href="#">Action book 3</a></li>
+    </ul>
+  </li>
+</ul>
+  </body>
 </html>
