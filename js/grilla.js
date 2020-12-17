@@ -1,13 +1,16 @@
-var textbuscar = document.getElementById("buscar");
-textbuscar.onkeyup = function(){
-	buscar(this);
-}
-function buscar(inputbuscar){
-	var valorabuscar = (inputbuscar.value).toLowerCase().trim();
-	var tabla_tr = document.getElementById("tabla").getElementsByTagName("tbody")[0].rows;
-	for(var i=0; i<tabla_tr.length; i++){
-		var tr = tabla_tr[i];
-		var textotr = (tr.innerText).toLowerCase();
-		tr.className = (textotr.indexOf(valorabuscar)>=0)?"mostrar":"ocultar";
+var busqueda = document.getElementById('buscar');
+var table = document.getElementById("tabla").tBodies[0];
+
+buscaTabla = function(){
+	texto = busqueda.value.toLowerCase();
+	var r=0;
+	while(row = table.rows[r++])
+	{
+		if ( row.innerText.toLowerCase().indexOf(texto) !== -1 )
+			row.style.display = null;
+		else
+			row.style.display = 'none';
 	}
 }
+
+busqueda.addEventListener('keyup', buscaTabla);

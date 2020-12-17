@@ -14,7 +14,10 @@
 <div class="container my-5 text-center">
 	<button class="btn btn-danger w-100" onclick="traer()">Cargar tabla</button>
 	<div class = "mt-5" >
-		<table class="table">
+
+
+
+		<table id="tabla" class="table table-striped" >
 	  <thead>
 	    <tr >
 	      <th scope="col">#</th>
@@ -27,12 +30,21 @@
 				<th scope="col">Página</th>
 				<th scope="col">Compañía</th>
 	    </tr>
+			<tr>
+          <td colspan="4">
+
+								<input id="buscar" type="text" class="form-control" placeholder="Escribe algo para filtrar" />
+
+
+          </td>
+        </tr>
 	  </thead>
 	  <tbody id ="contenido">
 
 
 	  </tbody>
 	</table>
+
 
 	</div>
 </div>
@@ -71,7 +83,7 @@
 	}
 	</script>
 
-
+<script src="js/grilla.js"> </script>
 
 </div>
 
